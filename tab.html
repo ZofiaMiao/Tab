@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡</title>
+    <link rel="stylesheet" href="css/tab.css">
+</head>
+<body>
+    <div class="js-tab tab">
+        <ul class="tab-nav">
+            <li class="active"><a href="javascript:void(0);">新闻</a></li>
+            <li><a href="javascript:void(0);">娱乐</a></li>
+            <li><a href="javascript:void(0);">电影</a></li>
+            <li><a href="javascript:void(0);">科技</a></li>
+        </ul>
+        <div class="content-wrap">
+            <div class="content-item current">
+                <img src="img/a.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/b.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/c.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/d.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="js-tab1 tab">
+        <ul class="tab-nav">
+            <li class="active"><a href="javascript:void(0);">新闻</a></li>
+            <li><a href="javascript:void(0);">娱乐</a></li>
+            <li><a href="javascript:void(0);">电影</a></li>
+            <li><a href="javascript:void(0);">科技</a></li>
+        </ul>
+        <div class="content-wrap">
+            <div class="content-item current">
+                <img src="img/a.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/b.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/c.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/d.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="js-tab2 tab">
+        <ul class="tab-nav">
+            <li class="active"><a href="javascript:void(0);">新闻</a></li>
+            <li><a href="javascript:void(0);">娱乐</a></li>
+            <li><a href="javascript:void(0);">电影</a></li>
+            <li><a href="javascript:void(0);">科技</a></li>
+        </ul>
+        <div class="content-wrap">
+            <div class="content-item current">
+                <img src="img/a.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/b.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/c.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/d.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/tab.js"></script>
+    <script>
+        $(function () {
+            //tab1
+            var tab1 = new Tab($(".js-tab").eq(0));
+            //tab2
+            var tab1 = new Tab($(".js-tab1").eq(0),{
+                "triggerType":"click",
+                "effect":"fade",
+                "invoke":1,
+                "auto":2000
+            });
+            //tab3
+            var tab1 = new Tab($(".js-tab2").eq(0),{
+                "triggerType":"mouseover",
+                "effect":"fade",
+                "invoke":3,
+                "auto":false
+            });
+        })
+    </script>
+</body>
+</html>

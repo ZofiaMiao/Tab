@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/tab.css">
 </head>
 <body>
-    <div class="js-tab tab">
+    <div class="js-tab tab" >
         <ul class="tab-nav">
             <li class="active"><a href="javascript:void(0);">新闻</a></li>
             <li><a href="javascript:void(0);">娱乐</a></li>
@@ -73,26 +73,24 @@
         </div>
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/tab.js"></script>
+    <script src="js/mytab.js"></script>
     <script>
         $(function () {
-            //tab1
             var tab1 = new Tab($(".js-tab").eq(0));
-            //tab2
-            var tab1 = new Tab($(".js-tab1").eq(0),{
+            var tab2 = new Tab($(".js-tab1").eq(0),{
                 "triggerType":"click",
-                "effect":"fade",
-                "invoke":1,
-                "auto":2000
+                "effect":"fadein",
+                "invoke":2,
+                "auto":true,
+                "autoInterval":3000,
             });
-            //tab3
-            var tab1 = new Tab($(".js-tab2").eq(0),{
+            var tab3 = new Tab($(".js-tab2").eq(0),{
                 "triggerType":"mouseover",
-                "effect":"fade",
+                "effect":"default",
                 "invoke":3,
-                "auto":false
             });
         })
+
     </script>
 </body>
 </html>
